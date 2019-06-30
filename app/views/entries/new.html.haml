@@ -1,0 +1,12 @@
+%h3 New Entry: #{@blog.title}
+= form_for @entry,url: blog_entries_path do |f|
+    .form-group
+        = f.label :title, "Title"
+        = f.text_field :title, {class:"form-control"}
+    .form-group
+        = f.label :body, "Body"
+        = f.text_field :body, {class:"form-control"}
+    .form-group
+        = f.submit "Save", {class:"btn btn-default"}
+.mt-5
+    = link_to "Back", root_path, class:"btn btn-default"
