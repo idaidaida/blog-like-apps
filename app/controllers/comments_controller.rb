@@ -7,6 +7,10 @@ class CommentsController < ApplicationController
         @comment.status = "unapproved"
         if @entry.save
             flash[:info] = "Success to create new comment"
+
+            # メールを送信する
+            NoticeMailer.with(blog: @blog,entry: @entry, comment: @comment).comment_notify_mail.deliver_later
+
             redirect_to blog_entry_url(@blog,@entry)
         else
             render "new"
