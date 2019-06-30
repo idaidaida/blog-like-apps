@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
     def show
         @blog = Blog.find(params[:blog_id])
         @entry = @blog.entries.find(params[:id])
-        
+        @comment = Comment.new
     end
 
     def new

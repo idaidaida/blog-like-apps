@@ -1,7 +1,6 @@
 %h4 Title: #{@blog.title}
-Edit | Back
 %hr
-%h4 Listng entries
+%h3 Listng entries
 %table.table
     %tr
         %td
@@ -24,5 +23,5 @@ Edit | Back
             %td
                 = link_to "Destroy",blog_entry_path(@blog,entry),method: :delete
 .mt-5
-    = link_to "Back", root_path, class:"btn btn-default mr-2"
+    = link_to "Back To Top", root_path, class:"btn btn-default mr-2"
     = link_to "New Entry", new_blog_entry_path(@blog), class:"btn btn-default"
