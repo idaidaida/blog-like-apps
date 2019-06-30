@@ -1,0 +1,11 @@
+!!!
+%html
+    %head
+        %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %body
+        %p 新しいコメントが登録されました。
+        %p 承認または削除してください。
+        %br/
+        %p Blog: #{@blog.title}
+        %p Entry: #{@entry.title}
+        %p Comment: #{@comment.body}
