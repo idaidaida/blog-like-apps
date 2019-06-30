@@ -1,0 +1,9 @@
+%h3 Edit blog
+= form_for @blog do |f|
+    .form-group
+        = f.label :title, "Title"
+        = f.text_field :title, {class:"form-control"}
+    .form-group
+        = f.submit "Save", {class:"btn btn-default"}
+.mt-5
+    = link_to "Back", root_path, class:"btn btn-default"
